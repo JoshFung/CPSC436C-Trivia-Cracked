@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --tinos: "Tinos", serif;
+  --archivo: "Archivo", sans-serif;
+}
+
+:root {
+  --tan: #fee9e1;
+  --dark: #171219;
+  --red: #ca2e55;
+  --blue: ##4357ad;
+  --light-blue: #508aa8;
+  --moss-green: #4f5d2f;
+  --jade: #00a676;
+  --yellow: #fcca46;
+}
+
+:root {
+  --small: 12px;
+  --medium: 16px;
+  --large: 20px;
+  --x-large: 24px;
+  --title: 64px;
+}
