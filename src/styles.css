@@ -8,14 +8,11 @@
 }
 
 :root {
-  --tan: #f9f5f1;
+  --light: #f9f5f1;
   --dark: #171219;
   --red: #ca2e55;
-  --blue: ##4357ad;
-  --light-blue: #508aa8;
-  --moss-green: #4f5d2f;
-  --jade: #00a676;
   --yellow: #fcca46;
+  --blue: #4678fc;
 }
 
 :root {
@@ -24,4 +21,5 @@
   --large: 20px;
   --x-large: 24px;
   --title: 64px;
+  --xl-title: 72px;
 }
