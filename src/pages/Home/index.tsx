@@ -11,7 +11,7 @@ const Home = () => {
             TRIVIA <span className={styles.yellowText}>CRACKED</span>
           </h1>
           <div className={styles.navContainer}>
-            <Link to="/play-trivia">
+            {/* <Link to="/play-trivia">
               <button
                 className={styles.navButton}
                 onClick={() =>
@@ -20,6 +20,16 @@ const Home = () => {
               >
                 Play Trivia
               </button>
+            </Link> */}
+            <Link
+              to="/browse-questions"
+              onClick={() =>
+                console.log(
+                  "Browse Questions Button clicked -> /browse-questions"
+                )
+              }
+            >
+              <button className={styles.navButton}>Browse Questions</button>
             </Link>
             <Link to="/submit-questions">
               <button
@@ -32,16 +42,6 @@ const Home = () => {
               >
                 Submit Questions
               </button>
-            </Link>
-            <Link
-              to="/browse-questions"
-              onClick={() =>
-                console.log(
-                  "Browse Questions Button clicked -> /browse-questions"
-                )
-              }
-            >
-              <button className={styles.navButton}>Browse Questions</button>
             </Link>
           </div>
         </div>
