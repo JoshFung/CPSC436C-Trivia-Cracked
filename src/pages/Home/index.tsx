@@ -1,31 +1,53 @@
+import BaseCard from "../../components/BaseCard";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-function Home() {
+const Home = () => {
   return (
-    <div className="home-container">
-      <Link to="/">
-        {
-          <img
-            className="logo"
-            src="src/assets/icon-white.png"
-            alt="Trivia Cracked Logo"
-            onClick={() => console.log("Logo clicked -> Moving to Home")}
-          />
-        }
-      </Link>
-      <div className="content-container">
-        <h1 className="title">
-          TRIVIA <span className="cracked">CRACKED</span>
-        </h1>
-        <div className="nav-container">
-          <button className="nav-button">Play Trivia</button>
-          <button className="nav-button">Submit Questions</button>
-          <button className="nav-button">Browse Questions</button>
+    <BaseCard
+      content={
+        <div className="content-container">
+          <h1 className="title">
+            TRIVIA <span className="cracked">CRACKED</span>
+          </h1>
+          <div className="nav-container">
+            <Link to="/play-trivia">
+              <button
+                className="nav-button"
+                onClick={() =>
+                  console.log("Play Trivia Button clicked -> /play-trivia")
+                }
+              >
+                Play Trivia
+              </button>
+            </Link>
+            <Link to="/submit-questions">
+              <button
+                className="nav-button"
+                onClick={() =>
+                  console.log(
+                    "Submit Questions Button clicked -> /submit-questions"
+                  )
+                }
+              >
+                Submit Questions
+              </button>
+            </Link>
+            <Link
+              to="/browse-questions"
+              onClick={() =>
+                console.log(
+                  "Browse Questions Button clicked -> /browse-questions"
+                )
+              }
+            >
+              <button className="nav-button">Browse Questions</button>
+            </Link>
+          </div>
         </div>
-      </div>
-    </div>
+      }
+    />
   );
-}
+};
 
 export default Home;
