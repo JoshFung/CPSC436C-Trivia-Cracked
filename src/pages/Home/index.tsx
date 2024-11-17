@@ -1,19 +1,19 @@
 import BaseCard from "../../components/BaseCard";
-import "./index.css";
+import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <BaseCard
       content={
-        <div className="content-container">
-          <h1 className="title">
-            TRIVIA <span className="cracked">CRACKED</span>
+        <div className={styles.contentContainer}>
+          <h1 className={styles.title}>
+            TRIVIA <span className={styles.yellowText}>CRACKED</span>
           </h1>
-          <div className="nav-container">
+          <div className={styles.navContainer}>
             <Link to="/play-trivia">
               <button
-                className="nav-button"
+                className={styles.navButton}
                 onClick={() =>
                   console.log("Play Trivia Button clicked -> /play-trivia")
                 }
@@ -23,7 +23,7 @@ const Home = () => {
             </Link>
             <Link to="/submit-questions">
               <button
-                className="nav-button"
+                className={styles.navButton}
                 onClick={() =>
                   console.log(
                     "Submit Questions Button clicked -> /submit-questions"
@@ -41,7 +41,7 @@ const Home = () => {
                 )
               }
             >
-              <button className="nav-button">Browse Questions</button>
+              <button className={styles.navButton}>Browse Questions</button>
             </Link>
           </div>
         </div>

@@ -10,16 +10,19 @@
 :root {
   --light: #f9f5f1;
   --dark: #171219;
+  --onyx: #35393c;
   --red: #ca2e55;
   --yellow: #fcca46;
   --blue: #4678fc;
+  --cyan: #42858c;
 }
 
 :root {
-  --small: 12px;
-  --medium: 16px;
-  --large: 20px;
-  --x-large: 24px;
+  --x-small: 24px;
+  --small: 32px;
+  --medium: 40px;
+  --large: 48px;
+  --x-large: 56px;
   --title: 64px;
-  --xl-title: 72px;
+  --xl-title: 80px;
 }

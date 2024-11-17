@@ -1,16 +1,10 @@
-.content-container {
+.contentContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .title {
@@ -20,11 +14,11 @@
   font-size: var(--xl-title);
 }
 
-.cracked {
+.yellowText {
   color: var(--yellow);
 }
 
-.nav-container {
+.navContainer {
   display: flex;
   flex-direction: row;
   gap: 4rem;
@@ -35,14 +29,14 @@ button:hover {
   border-color: transparent;
 }
 
-.nav-link {
+.navLink {
   position: relative;
   display: inline-block;
   width: 10rem;
   padding: 1rem;
 }
 
-.nav-button {
+.navButton {
   position: relative;
   display: inline-block;
   width: 10rem;
@@ -54,7 +48,7 @@ button:hover {
   border-radius: 4px;
   background-color: transparent;
   font-family: var(--jakarta-sans);
-  font-size: var(--large);
+  font-size: var(--x-small);
   font-weight: 600;
   cursor: pointer;
   overflow: hidden;
@@ -62,11 +56,11 @@ button:hover {
   z-index: 0;
 }
 
-.nav-button:hover {
+.navButton:hover {
   border-color: var(--blue);
 }
 
-.nav-button::before {
+.navButton::before {
   content: "";
   position: absolute;
   top: 0;
@@ -78,10 +72,10 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-.nav-button:hover::before {
+.navButton:hover::before {
   background-color: var(--blue);
 }
 
-.nav-button:hover {
+.navButton:hover {
   color: #ffffff;
 }

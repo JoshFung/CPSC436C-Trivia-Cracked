@@ -1,4 +1,4 @@
-.home-container {
+.baseContainer {
   height: calc(100% - 4rem);
   width: calc(100% - 4rem);
   position: relative;
@@ -22,4 +22,14 @@
   height: 3rem;
   width: 3rem;
   cursor: pointer;
+}
+
+.base-container.sharedSpace {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+}
+
+.logo.sharedSpace {
+  position: relative;
 }
