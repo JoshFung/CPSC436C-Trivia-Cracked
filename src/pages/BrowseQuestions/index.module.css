@@ -5,12 +5,21 @@
 }
 
 .title {
+  font-size: var(--medium);
+  font-style: italic;
+  font-weight: 500;
 }
 
 .yellow {
+  color: var(--yellow);
 }
 
 .triviaList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
   overflow: auto;
   flex: 1;
+  padding: 1rem;
 }
