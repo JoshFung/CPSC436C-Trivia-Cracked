@@ -1,0 +1,14 @@
+.triviaEntry {
+  background-color: red;
+  border: 1px solid var(--dark);
+  padding: 1rem;
+}
+
+.question {
+}
+
+.answer {
+}
+
+.categories {
+}

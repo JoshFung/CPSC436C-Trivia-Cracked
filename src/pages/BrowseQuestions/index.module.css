@@ -1,0 +1,16 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 4.5rem);
+}
+
+.title {
+}
+
+.yellow {
+}
+
+.triviaList {
+  overflow: auto;
+  flex: 1;
+}
