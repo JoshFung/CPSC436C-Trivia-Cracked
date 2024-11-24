@@ -1,4 +1,17 @@
-# React + TypeScript + Vite
+## Installation
+
+1. Using `npm`, install `bun` by running the following command:
+   `npm install -g bun`
+
+2. Restart your terminal and navigate to the root folder of this project
+
+3. Run `bun install` to install all dependencies
+
+4. Setup your `.env` file to use the API Gateway invoke URL. Omit the resource name. E.g., `https://some_site.com/someStage/` is the expected format.
+
+5. Start the project using `bun run dev`. It should open the page on `http://localhost:5173/`
+
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -47,4 +60,4 @@ export default tseslint.config({
     ...react.configs['jsx-runtime'].rules,
   },
 })
-```
+``` -->
