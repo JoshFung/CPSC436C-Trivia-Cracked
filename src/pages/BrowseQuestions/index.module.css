@@ -5,14 +5,40 @@
 }
 
 .title {
-    font-size: var(--medium);
-    font-style: italic;
-    font-weight: 500;
-    text-align: center;
+  font-size: var(--medium);
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
 }
 
 .yellow {
   color: var(--yellow);
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.categoryButton {
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  color: var(--light);
+  font-size: var(--xx-small);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.categoryButton.selected {
+  color: var(--dark);
+}
+
+.categoryButton:focus {
+  outline: none;
 }
 
 .triviaList {
@@ -23,19 +49,4 @@
   overflow: auto;
   flex: 1;
   padding: 1rem;
-}
-
-.filterContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.checkboxLabel {
-    display: flex;
-    align-items: center;
-    font-size: var(--small);
-    gap: 0.5rem;
-    cursor: pointer;
 }

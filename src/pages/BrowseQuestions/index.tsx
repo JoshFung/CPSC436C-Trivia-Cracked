@@ -3,6 +3,7 @@ import TriviaEntry from "../../components/TriviaEntry";
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 import TriviaEntryInterface from "../../ts/interfaces/TriviaEntryInterface";
+import CategoryColourEnum from "../../ts/enums/CategoryColourEnum";
 
 const BrowseQuestions = () => {
   const [triviaData, setTriviaData] = useState<TriviaEntryInterface[]>([]);
@@ -56,17 +57,26 @@ const BrowseQuestions = () => {
           <h2 className={styles.title}>
             <span className={styles.yellow}>BROWSE</span> QUESTIONS
           </h2>
+
           <div className={styles.filterContainer}>
             {categories.map((category) => (
-              <label key={category} className={styles.checkboxLabel}>
-                <input
-                  type="checkbox"
-                  value={category}
-                  checked={selectedCategories.includes(category)}
-                  onChange={() => handleCheckboxChange(category)}
-                />
+              <button
+                key={category}
+                className={`${styles.categoryButton} ${
+                  selectedCategories.includes(category) ? styles.selected : ""
+                }`}
+                style={{
+                  border: `4px solid ${CategoryColourEnum[category]}`,
+                  backgroundColor: `${
+                    selectedCategories.includes(category)
+                      ? CategoryColourEnum[category]
+                      : "transparent"
+                  }`,
+                }}
+                onClick={() => handleCheckboxChange(category)}
+              >
                 {category}
-              </label>
+              </button>
             ))}
           </div>
           <div className={styles.triviaList}>

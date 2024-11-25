@@ -18,6 +18,7 @@
 }
 
 :root {
+  --xx-small: 16px;
   --x-small: 24px;
   --small: 32px;
   --medium: 40px;
