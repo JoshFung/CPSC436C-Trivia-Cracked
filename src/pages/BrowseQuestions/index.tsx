@@ -6,7 +6,25 @@ import TriviaEntryInterface from "../../ts/interfaces/TriviaEntryInterface";
 
 const BrowseQuestions = () => {
   const [triviaData, setTriviaData] = useState<TriviaEntryInterface[]>([]);
-  const [searchInput, setSearchInput] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+  const categories = Array.from(
+    new Set(triviaData.map((entry) => entry.category))
+  );
+
+  const handleCheckboxChange = (category: string) => {
+    setSelectedCategories((prevSelected) =>
+      prevSelected.includes(category)
+        ? prevSelected.filter((c) => c !== category)
+        : [...prevSelected, category]
+    );
+  };
+
+  const filteredTrivia = triviaData.filter((entry) =>
+    selectedCategories.length === 0
+      ? true
+      : selectedCategories.includes(entry.category)
+  );
 
   const fetchQuestions = async () => {
     try {
@@ -30,12 +48,6 @@ const BrowseQuestions = () => {
     fetchQuestions();
   }, []);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = event.target.value;
-    console.log("Search term:", searchTerm);
-    setSearchInput(searchTerm);
-  };
-
   return (
     <BaseCard
       sharedSpace={true}
@@ -44,16 +56,22 @@ const BrowseQuestions = () => {
           <h2 className={styles.title}>
             <span className={styles.yellow}>BROWSE</span> QUESTIONS
           </h2>
-          <input
-            className={styles.searchBar}
-            value={searchInput}
-            onChange={handleSearchChange}
-            placeholder="Search..."
-          />
-          {/* TODO: Filter */}
+          <div className={styles.filterContainer}>
+            {categories.map((category) => (
+              <label key={category} className={styles.checkboxLabel}>
+                <input
+                  type="checkbox"
+                  value={category}
+                  checked={selectedCategories.includes(category)}
+                  onChange={() => handleCheckboxChange(category)}
+                />
+                {category}
+              </label>
+            ))}
+          </div>
           <div className={styles.triviaList}>
-            {triviaData.length > 0 &&
-              triviaData.map((entry, index) => (
+            {filteredTrivia.length > 0 &&
+              filteredTrivia.map((entry, index) => (
                 <TriviaEntry
                   key={index}
                   question={entry.question}
