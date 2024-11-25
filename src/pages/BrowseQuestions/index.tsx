@@ -83,7 +83,8 @@ const BrowseQuestions = () => {
             {filteredTrivia.length > 0 &&
               filteredTrivia.map((entry, index) => (
                 <TriviaEntry
-                  key={index}
+                  // We can use `${entry.question}-${Math.random()}` as key if we want questions hidden every time categories changes
+                  key={`${entry.question}`}
                   question={entry.question}
                   answer={entry.answer}
                   category={entry.category}

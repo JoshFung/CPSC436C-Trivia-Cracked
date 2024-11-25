@@ -17,8 +17,17 @@
 }
 
 .answer {
+  background-color: transparent;
   color: var(--dark);
   padding: 0.25rem 0 0 1rem;
+  font-style: italic;
+}
+
+.answer.revealed {
+  color: var(--yellow);
+  background-color: var(--dark);
+  font-style: normal;
+  padding: 0 0 0.25rem 1rem;
 }
 
 .categories {
