@@ -108,43 +108,57 @@ const testTriviaData: TriviaEntryInterface[] = [
 ];
 
 const BrowseQuestions = () => {
-  const [searchInput, setSearchInput] = useState("");
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = event.target.value;
-    console.log("Search term:", searchTerm);
-    setSearchInput(searchTerm);
-  };
+    const categories = Array.from(new Set(testTriviaData.map((entry) => entry.category)));
 
-  return (
-    <BaseCard
-      sharedSpace={true}
-      content={
-        <div className={styles.contentContainer}>
-          <h2 className={styles.title}>
-            <span className={styles.yellow}>BROWSE</span> QUESTIONS
+    const handleCheckboxChange = (category: string) => {
+        setSelectedCategories((prevSelected) =>
+            prevSelected.includes(category)
+                ? prevSelected.filter((c) => c !== category)
+                : [...prevSelected, category]
+        );
+    };
+
+    const filteredTrivia = testTriviaData.filter((entry) =>
+        selectedCategories.length === 0 ? false : selectedCategories.includes(entry.category)
+    );
+
+    return (
+        <BaseCard
+            sharedSpace={true}
+            content={
+                <div className={styles.contentContainer}>
+                    <h2 className={styles.title}>
+                        <span className={styles.yellow}>BROWSE</span> QUESTIONS
           </h2>
-          <input
-            className={styles.searchBar}
-            value={searchInput}
-            onChange={handleSearchChange}
-            placeholder="Search..."
-          />
-          {/* TODO: Filter */}
-          <div className={styles.triviaList}>
-            {testTriviaData.map((entry, index) => (
-              <TriviaEntry
-                key={index}
-                question={entry.question}
-                answer={entry.answer}
-                category={entry.category}
-              />
-            ))}
-          </div>
-        </div>
-      }
-    />
-  );
+                    <div className={styles.filterContainer}>
+                        {categories.map((category) => (
+                            <label key={category} className={styles.checkboxLabel}>
+                                <input
+                                    type="checkbox"
+                                    value={category}
+                                    checked={selectedCategories.includes(category)}
+                                    onChange={() => handleCheckboxChange(category)}
+                                />
+                                {category}
+                            </label>
+                        ))}
+                    </div>
+                    <div className={styles.triviaList}>
+                        {filteredTrivia.map((entry, index) => (
+                            <TriviaEntry
+                                key={index}
+                                question={entry.question}
+                                answer={entry.answer}
+                                category={entry.category}
+                            />
+                        ))}
+                    </div>
+                </div>
+            }
+        />
+    );
 };
 
 export default BrowseQuestions;
