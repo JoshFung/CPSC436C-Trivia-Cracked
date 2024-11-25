@@ -1,0 +1,113 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-family: var(--archivo);
+}
+
+.title {
+  font-size: var(--title);
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.formComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cyan);
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid var(--light);
+  border-radius: 2rem;
+}
+
+.qLabel,
+.aLabel {
+  font-family: var(--jakarta-sans);
+  font-size: var(--medium);
+  font-weight: 600;
+  color: var(--light);
+  vertical-align: middle;
+}
+
+.qInput,
+.aInput {
+  flex: 1 1 300px;
+  font-family: var(--archivo);
+  font-size: var(--medium);
+  line-height: 1;
+  padding: 1.5rem;
+  max-width: 25vw;
+  max-height: 30vh;
+  resize: none;
+  border-radius: 2rem;
+  color: var(--dark);
+  background-color: #d4d5d6;
+  align-items: center;
+  text-align: center;
+}
+
+.submit {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  height: 8vh;
+  color: var(--light);
+  border: 3px solid var(--yellow);
+  border-color: var(--yellow);
+  border-radius: 4px;
+  background-color: transparent;
+  font-family: var(--archivo);
+  font-style: italic;
+  font-size: var(--medium);
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 0;
+}
+
+.submit:hover {
+  border-color: var(--yellow);
+}
+
+.submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  background-color: var(--dark);
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
+.submit:hover::before {
+  background-color: var(--yellow);
+}
+
+.submit:hover {
+  color: var(--dark);
+}

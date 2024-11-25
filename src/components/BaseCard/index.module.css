@@ -1,0 +1,35 @@
+.baseContainer {
+  height: calc(100% - 4rem);
+  width: calc(100% - 4rem);
+  position: relative;
+  overflow: hidden;
+  margin: 2rem;
+  background-color: var(--dark);
+  /* background: rgb(49, 39, 52);
+  background: radial-gradient(
+    circle,
+    rgba(49, 39, 52, 1) 0%,
+    rgba(23, 18, 25, 1) 48%
+  ); */
+}
+
+.logo {
+  position: absolute;
+  margin-top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 1/1;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+}
+
+.base-container.sharedSpace {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+}
+
+.logo.sharedSpace {
+  position: relative;
+}

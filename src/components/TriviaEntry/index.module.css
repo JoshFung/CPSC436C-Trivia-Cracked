@@ -1,0 +1,25 @@
+.triviaEntry {
+  background-color: var(--light);
+  border: 1px solid var(--dark);
+  font-family: var(--archivo);
+}
+
+.qaContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.question {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+}
+
+.answer {
+  color: var(--dark);
+  padding: 0.25rem 0 0 1rem;
+}
+
+.categories {
+}
