@@ -1,9 +1,7 @@
 import BaseCard from "../../components/BaseCard";
-import TriviaEntry from "../../components/TriviaEntry";
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 import TriviaEntryInterface from "../../ts/interfaces/TriviaEntryInterface";
-import CategoryColourEnum from "../../ts/enums/CategoryColourEnum";
 import { PieChart } from "../../components/PieChart";
 
 const DataCharts = () => {

@@ -6,7 +6,6 @@ import * as d3 from "d3";
 
 const MARGIN_X = 150;
 const MARGIN_Y = 20;
-const INFLEXION_PADDING = 20;
 
 export const PieChart: React.FC<PieChartInterface> = (props) => {
   const { width, height, data } = props;
