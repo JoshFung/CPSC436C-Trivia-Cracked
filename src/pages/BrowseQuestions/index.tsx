@@ -38,7 +38,7 @@ const BrowseQuestions = () => {
       }
 
       const data = await response.json();
-      console.log("Questions fetched:", data);
+      // console.log("Questions fetched:", data);
       setTriviaData(data);
     } catch (err) {
       console.error("Error fetching questions:", err);
@@ -47,6 +47,7 @@ const BrowseQuestions = () => {
 
   useEffect(() => {
     fetchQuestions();
+    // console.log(triviaData);
   }, []);
 
   return (

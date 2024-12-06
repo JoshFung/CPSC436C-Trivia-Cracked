@@ -43,6 +43,16 @@ const Home = () => {
                 Submit Questions
               </button>
             </Link>
+            <Link to="/data-charts">
+              <button
+                className={styles.navButton}
+                onClick={() =>
+                  console.log("Data Charts Button clicked -> /data-charts")
+                }
+              >
+                Data Charts
+              </button>
+            </Link>
           </div>
         </div>
       }
