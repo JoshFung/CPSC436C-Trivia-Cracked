@@ -7,7 +7,7 @@
 
 3. Run `bun install` to install all dependencies
 
-4. Setup your `.env` file to use the API Gateway invoke URL. Omit the resource name. E.g., `https://some_site.com/someStage/` is the expected format.
+4. Setup your `.env` file to use the API Gateway invoke URL. Omit the resource name. E.g., `https://7et5fixa19.execute-api.ca-central-1.amazonaws.com/testStage/` is the expected format.
 
 5. Start the project using `bun run dev`. It should open the page on `http://localhost:5173/`
 
